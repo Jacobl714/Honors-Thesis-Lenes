@@ -155,8 +155,8 @@ x = input("How many students, professor?\n")
 for i in range(int(x)):
     if __name__ == '__main__':
         while True:
-            n = 16       #8 bit prime
-            eSize = 16
+            n = 8       #8 bit prime
+            eSize = 8
             p = getLowLevelPrime(n)
             q = getLowLevelPrime(n)
             e1 = getLowLevelPrime(eSize) 
@@ -198,9 +198,14 @@ for i in range(int(x)):
                 #Student P, Q, N, and Phi Files
                 student_file = open('/Users/jacoblenes/Desktop/Fall 2021/HonorsThesis/FactFinal/StudentFact/forStudent' + str(i)+'.csv', 'w')
                 student_file.write("P is: " + str(p) +"\nQ is: " + str(q)+ "\nN is: " + str(nFact) + "\nPhi is: " + str(phi) + '\n\n*****\n\n')
+                for word in encrypt_msg:
+                    student_file.write(str(word) + ' ')
+                student_file.write('\n\n')
                 student_file.close()
                 break
 #1 folder per student --> csv w p and q, 1 for professor 
 
 #This creates a sperate file per student, all within the PROF folder
 # number of files asked
+# 
+# put on github 

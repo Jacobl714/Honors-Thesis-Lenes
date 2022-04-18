@@ -227,7 +227,8 @@ def generate_keys(iNumBits=256, iConfidence=32):
 
 		publicKey = PublicKey(p, g, h, iNumBits)
 		privateKey = PrivateKey(p, g, x, iNumBits)
-
+		#print ({'privateKey': privateKey, 'publicKey': publicKey})
+		
 		return {'privateKey': privateKey, 'publicKey': publicKey}
 
 
@@ -310,5 +311,5 @@ for i in range(int(x)):
 			prof_file2.write(message + '\n\n****\n\n' + cipher)
 			prof_file2.close()
 			student_file = open('/Users/jacoblenes/Desktop/Fall 2021/HonorsThesis/GamalFinal/StudentGamal/forStudent' + str(i)+'.csv', 'w')
-			student_file.write('Pub Key: ' + str(pub) + '\n' + 'Priv key: ' + str(priv) + '\n\n' + cipher)
+			student_file.write('Pub Key: ' + str(pub.h) + '\n\n' + cipher)
 			break
